@@ -1,3 +1,8 @@
+:root {
+  --largura-containers: 90%;
+  --margem-baixo-containers: 20px;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -19,8 +24,9 @@ body {
   color: white;
 }
 header {
-  width: 90%;
+  width: var(--largura-containers);
   padding: 10px;
+  margin-bottom: var(--margem-baixo-containers);
 }
 
 header .ft-perfil {
@@ -45,11 +51,12 @@ header .name-perfil {
 }
 
 .cont-list-links {
-  width: 90%;
+  width: var(--largura-containers);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: var(--margem-baixo-containers);
 }
 .cont-list-links a {
   width: 100%;
@@ -68,26 +75,49 @@ header .name-perfil {
   background-color: black;
   border-radius: 30px;
   margin-bottom: 10px;
-  transition: 1s;
+  transition-duration: 1s;
 }
 .cont-list-links a:hover {
   background-image: linear-gradient(
     to right,
-    rgb(88, 88, 181) 16%,
+    rgb(88, 88, 181) 20%,
     rgb(32, 180, 32)
   );
 }
 
 footer {
-  width: 90%;
+  width: var(--largura-containers);
+  padding-bottom: 50px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin-top: 20px;
 }
 
 footer .links-contato {
   width: 100%;
   display: flex;
   justify-content: space-around;
+}
+
+@media screen and (min-width: 600px) {
+  :root {
+    --largura-containers: 70%;
+  }
+}
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 20px;
+  }
+  :root {
+    --largura-containers: 50%;
+    --margem-baixo-containers: 30px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 20px;
+  }
+  :root {
+    --largura-containers: 45%;
+    --margem-baixo-containers: 40px;
+  }
 }

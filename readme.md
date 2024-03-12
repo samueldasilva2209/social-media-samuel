@@ -10,4 +10,5 @@ Este projeto é uma página simples, para exposição de links de redes sociais 
 ## competências
 
 - Desenvolvimento Mobile First
+- Responsividade
 - Posicionamento de elementos display flex
